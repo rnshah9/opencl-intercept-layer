@@ -1,0 +1,11 @@
+project: opencl-intercept-layer
+target: opencl-intercept-layer
+image: ghcr.io/rnshah9/playground:opencl-intercept-layer
+testsuite:
+  - file://test
+
+cmds:
+  - cmd: /repo/build/cliloader/cliloader @@
+    max_length: 40000
+    env:
+      DISABLE_SMOKETEST: '1'
